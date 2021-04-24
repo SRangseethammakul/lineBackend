@@ -46,7 +46,7 @@ router.post('/', async (req, res) => {
   const postToDialogflow =async payloadRequest => {
     payloadRequest.headers.host = "dialogflow.cloud.google.com";
     await axios({
-      url : "https://dialogflow.cloud.google.com/v1/integrations/line/webhook/825c62bf-c875-4b48-a015-3e031c5d346d",
+      url : process.env.DIALOGFLOW,
       headers : payloadRequest.headers,
       method : "post",
       data: payloadRequest.body
