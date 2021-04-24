@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
   });
 });
 router.post('/', async (req, res) => {
+  console.log(req.body);
   if (req.method === "POST") {
     let event = req.body.events[0]
     if (event.type === "message" && event.message.type === "text") {
