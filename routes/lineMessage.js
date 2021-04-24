@@ -24,6 +24,7 @@ router.post('/', (req, res) => {
         request: req,
         response: res
     });
+    console.log('Body: ',req.body);
     async function welcome(agent) {
         try {
             console.log("---------------------line welcome---------------------------");
