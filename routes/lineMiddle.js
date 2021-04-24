@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
+const logger = require('morgan');
+require('dotenv').config();
 const { Payload } = require('dialogflow-fulfillment');
 const LINE_MESSAGING_API = 'https://api.line.me/v2/bot/message';
 const LINE_HEADER = {
     "Content-Type": "application/json",
-    Authorization: `Bearer OuKKma1JXpkmfskoMpGX3ShiGwRH4gueGfBeWhp2TAiJxZd5lvur11fHgFZkgawY6NTicCmpUuox6cJndDRipXYIubs8qjOysPJHXJKsi4ySedTHevqgKCCivPf3ETWpIuh/iVlcRe68CuC6zsyjHwdB04t89/1O/w1cDnyilFU=`
+    Authorization: `Bearer ${process.env.LINE}`
 }
 router.get('/', async (req, res) => {
 
