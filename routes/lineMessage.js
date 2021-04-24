@@ -24,7 +24,9 @@ router.post('/', (req, res) => {
         request: req,
         response: res
     });
+    console.log('Body: ',req);
     console.log('Body: ',req.body);
+    console.log('Dialogflow Request headers: ' + JSON.stringify(req.headers));
     async function welcome(agent) {
         try {
             console.log("---------------------line welcome---------------------------");
