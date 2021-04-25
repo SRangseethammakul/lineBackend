@@ -20,7 +20,11 @@ router.post('/', async (req, res) => {
     let event = req.body.events[0]
     if (event.type === "message" && event.message.type === "text") {
       postToDialogflow(req);
-    } else {
+    }
+    else if(event.message.type === "location") {
+      reply(event.replyToken, {type: "text", text :`${event.message.latitude} ,${event.message.longitude}`});
+    } 
+    else {
       reply(event.replyToken, {type: "text", text :event.message.type});
     }
   }
