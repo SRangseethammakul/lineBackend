@@ -4,6 +4,9 @@ const axios = require('axios');
 const logger = require('morgan');
 require('dotenv').config();
 const { Payload } = require('dialogflow-fulfillment');
+const {
+  getPolution
+} = require('../controller/linemessage');
 const LINE_MESSAGING_API = 'https://api.line.me/v2/bot/message';
 const LINE_HEADER = {
     "Content-Type": "application/json",
@@ -22,7 +25,12 @@ router.post('/', async (req, res) => {
       postToDialogflow(req);
     }
     else if(event.message.type === "location") {
-      reply(event.replyToken, {type: "text", text :`${event.message.latitude} ,${event.message.longitude}`});
+      try{
+        let payload = await getPolution(event.message.latitude, event.message.longitude);
+        await reply(event.replyToken, payload);
+      }catch(err){
+        console.log(err)
+      }
     } 
     else {
       reply(event.replyToken, {type: "text", text :event.message.type});
