@@ -13,7 +13,6 @@ const {
 } = require('../controller/linemessage');
 router.get('/', async (req, res) => {
     const dataCovid = await getCovid();
-    console.log(dataCovid);
     return res.status(200).json({
         status: true,
         data: dataCovid,
@@ -24,7 +23,6 @@ router.post('/', (req, res) => {
         request: req,
         response: res
     });
-    console.log('Body: ', req.body.events);
     async function welcome(agent) {
         try {
             console.log("---------------------line welcome---------------------------");
@@ -438,7 +436,6 @@ router.post('/', (req, res) => {
     }
 
     function bodyMassIndex(agent) {
-        console.log("body");
         let weight = req.body.queryResult.parameters.weight;
         let height = req.body.queryResult.parameters.length / 100;
         let bmi = (weight / (height * height)).toFixed(2);
@@ -474,7 +471,6 @@ router.post('/', (req, res) => {
             "packageId": pkgId,
             "stickerId": stkId
         };
-
         let payload = new Payload("LINE", payloadJson, {
             sendAsMessage: true
         });
