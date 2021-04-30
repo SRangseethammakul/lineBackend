@@ -445,23 +445,23 @@ router.post('/', (req, res) => {
         let stkId = "1";
 
         if (bmi < 18.5) {
-            result = "xs";
+            result = "คุณมีน้ำหนักน้อยหรือผอม โดยทั่วไป ค่าดัชนีมวลกายปกติมีค่าน้อยกว่า 18.50";
             pkgId = "11538";
             stkId = "51626519";
         } else if (bmi >= 18.5 && bmi < 23) {
-            result = "s";
+            result = "คุณมี น้ำหนักปกติ โดยทั่วไปค่าดัชนีมวลกายปกติมีค่าระหว่าง 18.50 - 22.90";
             pkgId = "11537";
             stkId = "52002741";
         } else if (bmi >= 23 && bmi < 25) {
-            result = "m";
+            result = "คุณมี น้ำหนักเกิน หรือรูปร่างท้วม โดยทั่วไปค่าดัชนีมวลกายปกติมีค่าระหว่าง 23 - 24.90";
             pkgId = "11537";
             stkId = "52002745";
         } else if (bmi >= 25 && bmi < 30) {
-            result = "l";
+            result = "คุณ อ้วนแล้ว (อ้วนระดับ 2) โดยทั่วไปค่าดัชนีมวลกายปกติมีค่าระหว่าง 25 - 29.90";
             pkgId = "11537";
             stkId = "52002762";
         } else if (bmi >= 30) {
-            result = "xl";
+            result = "คุณ อ้วนแล้ว (อ้วนระดับ 3) โดยทั่วไปค่าดัชนีมวลกายปกติมีค่าระหว่าง 25 - 29.90";
             pkgId = "11538";
             stkId = "51626513";
         }
@@ -474,7 +474,7 @@ router.post('/', (req, res) => {
         let payload = new Payload("LINE", payloadJson, {
             sendAsMessage: true
         });
-        agent.add(`${result} , BMI : ${bmi}`);
+        agent.add(`ค่า BMI ของคุณคือ ${bmi} ${result}`);
         agent.add(payload);
     }
     let intentMap = new Map();
