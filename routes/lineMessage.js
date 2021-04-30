@@ -465,17 +465,16 @@ router.post('/', (req, res) => {
             pkgId = "11538";
             stkId = "51626513";
         }
-
         let payloadJson = {
             "type": "sticker",
             "packageId": pkgId,
             "stickerId": stkId
         };
-        console.log(result);
         let payload = new Payload("LINE", payloadJson, {
             sendAsMessage: true
         });
-        agent.add(`ค่า BMI ของคุณคือ ${bmi} ${result}`);
+        agent.add(`ค่า BMI ของคุณคือ ${bmi}`);
+        agent.add(`${result}`);
         agent.add(payload);
     }
     let intentMap = new Map();
