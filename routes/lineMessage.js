@@ -471,6 +471,7 @@ router.post('/', (req, res) => {
             "packageId": pkgId,
             "stickerId": stkId
         };
+        console.log(result);
         let payload = new Payload("LINE", payloadJson, {
             sendAsMessage: true
         });
