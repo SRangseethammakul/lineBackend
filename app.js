@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// app.use('/users', usersRouter);
 app.use('/apis/linemessage', lineMessageRouter);
 app.use('/apis/lineMidRouter', lineMiddleRouter);
 app.get("/spotify", (req, res) => {
