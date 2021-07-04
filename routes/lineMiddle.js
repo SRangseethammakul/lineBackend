@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
         let payload = await getPolution(event.message.latitude, event.message.longitude);
         await reply(event.replyToken, payload);
       } catch (err) {
-        console.log(err);
+        console.log(err.message);
       }
     } else {
       reply(event.replyToken, {
@@ -54,7 +54,7 @@ const reply = async (replyToken, message) => {
       })
     });
   } catch (err) {
-    console.log(err);
+    console.log(err.message);
   }
 };
 const postToDialogflow = async payloadRequest => {
