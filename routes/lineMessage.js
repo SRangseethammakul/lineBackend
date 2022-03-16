@@ -274,7 +274,7 @@ router.post("/", (req, res) => {
                   },
                   {
                     type: "text",
-                    text: `${dataCovid.update_date}`,
+                    text: `${dataCovid[0].update_date}`,
                     color: "#aaaaaa",
                   },
                 ],
@@ -304,7 +304,7 @@ router.post("/", (req, res) => {
                       },
                       {
                         type: "text",
-                        text: `${dataCovid.new_case}`,
+                        text: `${dataCovid[0].new_case}`,
                         size: "sm",
                         align: "end",
                       },
@@ -320,7 +320,7 @@ router.post("/", (req, res) => {
                       },
                       {
                         type: "text",
-                        text: `${dataCovid.new_case_excludeabroad}`,
+                        text: `${dataCovid[0].new_case_excludeabroad}`,
                         size: "sm",
                         align: "end",
                       },
@@ -336,7 +336,7 @@ router.post("/", (req, res) => {
                       },
                       {
                         type: "text",
-                        text: `${dataCovid.new_recovered}`,
+                        text: `${dataCovid[0].new_recovered}`,
                         size: "sm",
                         align: "end",
                       },
@@ -352,7 +352,7 @@ router.post("/", (req, res) => {
                       },
                       {
                         type: "text",
-                        text: `${dataCovid.new_death}`,
+                        text: `${dataCovid[0].new_death}`,
                         size: "sm",
                         align: "end",
                       },
@@ -385,7 +385,7 @@ router.post("/", (req, res) => {
                       },
                       {
                         type: "text",
-                        text: `${dataCovid.total_case}`,
+                        text: `${dataCovid[0].total_case}`,
                         size: "sm",
                         align: "end",
                       },
@@ -401,7 +401,7 @@ router.post("/", (req, res) => {
                       },
                       {
                         type: "text",
-                        text: `${dataCovid.total_case_excludeabroad}`,
+                        text: `${dataCovid[0].total_case_excludeabroad}`,
                         size: "sm",
                         align: "end",
                       },
@@ -417,7 +417,7 @@ router.post("/", (req, res) => {
                       },
                       {
                         type: "text",
-                        text: `${dataCovid.total_recovered}`,
+                        text: `${dataCovid[0].total_recovered}`,
                         size: "sm",
                         align: "end",
                       },
@@ -433,7 +433,7 @@ router.post("/", (req, res) => {
                       },
                       {
                         type: "text",
-                        text: `${dataCovid.total_death}`,
+                        text: `${dataCovid[0].total_death}`,
                         size: "sm",
                         align: "end",
                       },
