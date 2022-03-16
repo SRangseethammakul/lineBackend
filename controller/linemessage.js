@@ -3,7 +3,7 @@ const formatDistanceToNow = require('date-fns/formatDistanceToNow');
 const parseISO = require('date-fns/parseISO');
 async function getCovid() {
   try {
-    const response = await axios.get('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
+    const response = await axios.get('https://covid19.ddc.moph.go.th/api/Cases/today-cases-all');
     return response.data;
   } catch (error) {
     console.error(error);

@@ -263,7 +263,7 @@ router.post('/', (req, res) => {
                                     },
                                     {
                                         "type": "text",
-                                        "text": `${dataCovid.UpdateDate}`,
+                                        "text": `${dataCovid.update_date}`,
                                         "color": "#aaaaaa"
                                     }
                                 ],
@@ -291,7 +291,7 @@ router.post('/', (req, res) => {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": `${dataCovid.NewConfirmed}`,
+                                                "text": `${dataCovid.new_case}`,
                                                 "size": "sm",
                                                 "align": "end"
                                             }
@@ -306,7 +306,7 @@ router.post('/', (req, res) => {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": `${dataCovid.NewHospitalized}`,
+                                                "text": `${dataCovid.new_case_excludeabroad}`,
                                                 "size": "sm",
                                                 "align": "end"
                                             }
@@ -321,7 +321,7 @@ router.post('/', (req, res) => {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": `${dataCovid.NewRecovered}`,
+                                                "text": `${dataCovid.new_recovered}`,
                                                 "size": "sm",
                                                 "align": "end"
                                             }
@@ -336,7 +336,7 @@ router.post('/', (req, res) => {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": `${dataCovid.NewDeaths}`,
+                                                "text": `${dataCovid.new_death}`,
                                                 "size": "sm",
                                                 "align": "end"
                                             }
@@ -367,7 +367,7 @@ router.post('/', (req, res) => {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": `${dataCovid.Confirmed}`,
+                                                "text": `${dataCovid.total_case}`,
                                                 "size": "sm",
                                                 "align": "end"
                                             }
@@ -382,7 +382,7 @@ router.post('/', (req, res) => {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": `${dataCovid.Hospitalized}`,
+                                                "text": `${dataCovid.total_case_excludeabroad}`,
                                                 "size": "sm",
                                                 "align": "end"
                                             }
@@ -397,7 +397,7 @@ router.post('/', (req, res) => {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": `${dataCovid.Recovered}`,
+                                                "text": `${dataCovid.total_recovered}`,
                                                 "size": "sm",
                                                 "align": "end"
                                             }
@@ -412,7 +412,7 @@ router.post('/', (req, res) => {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": `${dataCovid.Deaths}`,
+                                                "text": `${dataCovid.total_death}`,
                                                 "size": "sm",
                                                 "align": "end"
                                             }
